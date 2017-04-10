@@ -6,6 +6,10 @@ CONDA_CONF_URL="https://raw.githubusercontent.com/makkus/freckles-dev/master/.co
 PEM_CERT_URL="https://raw.githubusercontent.com/makkus/freckles-dev/master/certs/markus.pem"
 CRT_CERT_URL="https://raw.githubusercontent.com/makkus/freckles-dev/master/certs/markus.crt"
 
+function command_exists {
+   s type "$1" > /dev/null 2>&1 ;
+}
+
 function download {
         if command_exists wget; then
             wget -O $2 $1
