@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-PIP_CONF_URL=
-CONDA_CONF_URL=
+PIP_CONF_URL="https://raw.githubusercontent.com/makkus/freckles-dev/master/.pip/pip.conf"
+CONDA_CONF_URL="https://raw.githubusercontent.com/makkus/freckles-dev/master/.condarc"
 
 function download {
     {
