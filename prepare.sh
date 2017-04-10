@@ -3,6 +3,9 @@
 PIP_CONF_URL="https://raw.githubusercontent.com/makkus/freckles-dev/master/.pip/pip.conf"
 CONDA_CONF_URL="https://raw.githubusercontent.com/makkus/freckles-dev/master/.condarc"
 
+PEM_CERT_URL="https://raw.githubusercontent.com/makkus/freckles-dev/master/certs/markus.pem"
+CRT_CERT_URL="https://raw.githubusercontent.com/makkus/freckles-dev/master/certs/markus.crt"
+
 function download {
     {
         if command_exists wget; then
@@ -16,10 +19,13 @@ function download {
     } >> "$SCRIPT_LOG_FILE"
 }
 
-mkdir ~/.pip
+mkdir -p ~/.pip
 cd ~/.pip
 
 download "$PIP_CONF_URL"
 
 cd ~
 download "$CONDA_CONF_URL"
+
+mkdir -p ~/certs
+cd ~/certs
