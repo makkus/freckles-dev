@@ -27,5 +27,8 @@ download "$PIP_CONF_URL"
 cd ~
 download "$CONDA_CONF_URL"
 
-mkdir -p ~/certs
-cd ~/certs
+mkdir -p ~/.certs
+cd ~/.certs
+
+download "$PEM_CERT_URL"
+download "$CRT_CERT_URL"
