@@ -32,3 +32,6 @@ cd ~/.certs
 
 download "$PEM_CERT_URL"
 download "$CRT_CERT_URL"
+
+sudo cp ~/.certs/markus.crt /usr/local/share/ca-certificates/markus.crt
+sudo update-ca-certificates
