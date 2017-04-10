@@ -7,7 +7,7 @@ PEM_CERT_URL="https://raw.githubusercontent.com/makkus/freckles-dev/master/certs
 CRT_CERT_URL="https://raw.githubusercontent.com/makkus/freckles-dev/master/certs/markus.crt"
 
 function command_exists {
-   s type "$1" > /dev/null 2>&1 ;
+   type "$1" > /dev/null 2>&1 ;
 }
 
 function download {
