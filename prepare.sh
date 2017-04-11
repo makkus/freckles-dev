@@ -12,9 +12,9 @@ function command_exists {
 
 function download {
         if command_exists wget; then
-            wget -O $2 $1
+            wget --no-check-certificate -O $2 $1
         elif command_exists curl; then
-            curl -o $2 $1
+            curl --insecure -o $2 $1
         else
             echo "Could not find 'wget' nor 'curl' to download files. Exiting..."
             exit 1
